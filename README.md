@@ -1,7 +1,13 @@
-# Whats is this? [WIP]
+# :owl: Whats is this? [WIP]
 
-A simple way of debuggin your `k8s` app using a lightweight container.
+A simple way of debugging your `k8s` app using a lightweight container using [Kubernetes debug ephemeral containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#ephemeral-container-example). It gathers the following data:
 
+* top
+* lsof
+* vmstat
+* iostat
+* nfsiostat
+* nfsstat 
 ## build_image.sh
 
 ```
@@ -16,13 +22,10 @@ docker push jandroavicloud/performance-debugger:latest
 FROM alpine:3.15.5
 
 RUN apk add --no-cache \
-    htop \
-    iftop \
-    iotop \
-    iptraf-ng \
     lsof \
     nethogs \
     procps \
+    nfs-utils \
     tcpdump
 
 RUN mkdir -p /scripts
@@ -36,9 +39,8 @@ CMD ["sh", "/scripts/performance.sh"]
 
 ## Test it
 
+usage: run_performance_collection.sh <pod_name> <namespace>
+
 ```
-kubectl debug YOUR_APP --image=jandroavicloud/performance-debugger:latest --share-processes --copy-to=performance-debugger
-sleep 70
-kubectl cp performance-debugger:/scripts/performance_output.tar.gz performance_output.tar.gz
-kubectl delete pod performance-debugger --force --grace-period=0
+ sh run_performance_collection.sh busybox default
 ```

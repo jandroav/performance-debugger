@@ -1,0 +1,50 @@
+COMMAND PID     USER   FD      TYPE DEVICE SIZE/OFF    NODE NAME
+pause     1    65535  cwd   unknown                         /proc/1/cwd (readlink: Permission denied)
+pause     1    65535  rtd   unknown                         /proc/1/root (readlink: Permission denied)
+pause     1    65535  txt   unknown                         /proc/1/exe (readlink: Permission denied)
+pause     1    65535    0   unknown                         /proc/1/fd/0 (readlink: Permission denied)
+pause     1    65535    1   unknown                         /proc/1/fd/1 (readlink: Permission denied)
+pause     1    65535    2   unknown                         /proc/1/fd/2 (readlink: Permission denied)
+sleep     7     root  cwd       DIR  0,296     4096 3675068 /
+sleep     7     root  rtd       DIR  0,296     4096 3675068 /
+sleep     7     root  txt       REG  0,296  1157408 3151774 /bin/sleep
+sleep     7     root  mem       REG  253,1          3151774 /bin/sleep (path dev=0,305, inode=3155539)
+sleep     7     root    0u      CHR    1,3      0t0       6 /dev/null
+sleep     7     root    1w     FIFO   0,10      0t0 1160534 pipe
+sleep     7     root    2w     FIFO   0,10      0t0 1160535 pipe
+sh       13     root  cwd       DIR  0,305     4096 3678142 /scripts
+sh       13     root  rtd       DIR  0,305     4096 3678168 /
+sh       13     root  txt       REG  0,305   824984 3155539 /bin/busybox
+sh       13     root  mem       REG  253,1          3155539 /bin/busybox (path dev=0,305)
+sh       13     root  mem       REG  253,1          3155702 /lib/ld-musl-x86_64.so.1 (path dev=0,305)
+sh       13     root    0u      CHR    1,3      0t0       6 /dev/null
+sh       13     root    1w     FIFO   0,10      0t0 1161620 pipe
+sh       13     root    2w     FIFO   0,10      0t0 1161621 pipe
+sh       13     root   10r      REG  0,305      854 3678143 /scripts/performance.sh
+lsof     35     root  cwd       DIR  0,305     4096 3678142 /scripts
+lsof     35     root  rtd       DIR  0,305     4096 3678168 /
+lsof     35     root  txt       REG  0,305   150816 3675208 /usr/bin/lsof
+lsof     35     root  mem       REG  253,1          3675208 /usr/bin/lsof (path dev=0,305)
+lsof     35     root  mem       REG  253,1          3155702 /lib/ld-musl-x86_64.so.1 (path dev=0,305)
+lsof     35     root    0r      CHR    1,3      0t0       6 /dev/null
+lsof     35     root    1w      REG  0,305        0 3678208 /scripts/performance_output/lsof/lsof_07:56:45.txt
+lsof     35     root    2w     FIFO   0,10      0t0 1161621 pipe
+lsof     35     root    3r      DIR  0,307        0       1 /proc
+lsof     35     root    4r      DIR  0,307        0 1161720 /proc/35/fd
+lsof     35     root    5w     FIFO   0,10      0t0 1161725 pipe
+lsof     35     root    6r     FIFO   0,10      0t0 1161726 pipe
+sleep    41     root  cwd       DIR  0,305     4096 3678142 /scripts
+sleep    41     root  rtd       DIR  0,305     4096 3678168 /
+sleep    41     root  txt       REG  0,305   824984 3155539 /bin/busybox
+sleep    41     root  mem       REG  253,1          3155539 /bin/busybox (path dev=0,305)
+sleep    41     root  mem       REG  253,1          3155702 /lib/ld-musl-x86_64.so.1 (path dev=0,305)
+sleep    41     root    0u      CHR    1,3      0t0       6 /dev/null
+sleep    41     root    1w     FIFO   0,10      0t0 1161620 pipe
+sleep    41     root    2w     FIFO   0,10      0t0 1161621 pipe
+lsof     47     root  cwd       DIR  0,305     4096 3678142 /scripts
+lsof     47     root  rtd       DIR  0,305     4096 3678168 /
+lsof     47     root  txt       REG  0,305   150816 3675208 /usr/bin/lsof
+lsof     47     root  mem       REG  253,1          3675208 /usr/bin/lsof (path dev=0,305)
+lsof     47     root  mem       REG  253,1          3155702 /lib/ld-musl-x86_64.so.1 (path dev=0,305)
+lsof     47     root    4r     FIFO   0,10      0t0 1161725 pipe
+lsof     47     root    7w     FIFO   0,10      0t0 1161726 pipe
