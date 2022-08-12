@@ -1,4 +1,4 @@
-# :owl: Whats is this? [WIP]
+# :owl: Whats is this?
 
 A simple way of debugging your `k8s` app using a lightweight container using [Kubernetes debug ephemeral containers](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#ephemeral-container-example). It gathers the following data:
 
@@ -8,7 +8,7 @@ A simple way of debugging your `k8s` app using a lightweight container using [Ku
 * iostat
 * nfsiostat
 * nfsstat 
-## build_image.sh
+## :building_construction: build_image.sh
 
 ```
 docker build -t jandroavicloud/performance-debugger .
@@ -16,7 +16,7 @@ docker tag jandroavicloud/performance-debugger jandroavicloud/performance-debugg
 docker push jandroavicloud/performance-debugger:latest
 ```
 
-## Dockerfile
+## :whale: Dockerfile
 
 ```
 FROM alpine:3.15.5
@@ -37,7 +37,7 @@ RUN chmod +x performance.sh
 CMD ["sh", "/scripts/performance.sh"]
 ```
 
-## Test it
+## :test_tube: Test it
 
 usage: run_performance_collection.sh <pod_name> <namespace>
 
