@@ -21,8 +21,7 @@ do
     executions=$(( $executions - 1 ))
 done
 
-cd /scripts
-tar -zcvf performance_output.tar.gz /performance_output
+tar -zcvf performance_output.tar.gz /scripts/performance_output
 
 echo "done!"
 

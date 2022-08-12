@@ -1,1 +1,0 @@
-No NFS mount points were found
